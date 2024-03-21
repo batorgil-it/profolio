@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  html {
+    scroll-behavior: smooth;
+    @apply text-gray-900;
+  }
+
+  .link {
+    @apply text-gray-500 hover:text-black dark:hover:text-white font-semibold;
+  }
+
+  .hero {
+    background-image: radial-gradient(
+        at 64% 9%,
+        hsla(201, 72%, 79%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 91% 53%, hsla(280, 97%, 71%, 1) 0px, transparent 50%),
+      radial-gradient(at 8% 13%, hsla(190, 81%, 65%, 1) 0px, transparent 50%);
+  }
+
+  input[type="text"]:focus {
+    @apply border-primary;
+  }
+  input[type="text"] {
+    @apply rounded-lg bg-gray-50 dark:bg-gray-900;
+  }
+
+  input[type="email"]:focus {
+    @apply border-primary;
+  }
+  input[type="email"] {
+    @apply rounded-lg bg-gray-50 dark:bg-gray-900;
+  }
+  textarea:focus {
+    @apply border-primary;
+  }
+  textarea {
+    @apply rounded-lg bg-gray-50 dark:bg-gray-900;
+  }
+}

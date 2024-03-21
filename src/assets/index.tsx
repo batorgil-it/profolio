@@ -1,0 +1,12 @@
+export { default as IconMoon } from "./moon.svg";
+export { default as IconSun } from "./sun.svg";
+export { default as IconUS } from "./us.svg";
+export { default as IconMN } from "./mn.svg";
+export { default as IconTerminal } from "./terminal.svg";
+export { default as IconSend } from "./send.svg";
+export { default as IconArrowRight } from "./arrow-right.svg";
+export { default as IconLinkedin } from "./linkedin.svg";
+export { default as IconFileText } from "./file-text.svg";
+export { default as IconCloudDownload } from "./download-cloud.svg";
+export { default as IconInsta } from "./insta.svg";
+export { default as IconLoader } from "./loader.svg";
