@@ -1,5 +1,5 @@
 import "./global.css";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Header } from "@/components/layout";
 import { AppContainer } from "@/components/ui";
 import classNames from "classnames";
@@ -50,6 +50,8 @@ export default function RootLayout({
           <div className="relative dark:text-white">{children}</div>
         </AppContainer>
       </NextIntlClientProvider>
+
+      <GoogleAnalytics gaId="G-RWPLP7XBSQ" />
     </html>
   );
 }

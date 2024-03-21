@@ -4,8 +4,8 @@ import { MeduimBlog } from "@/types";
 import { FC, useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import BlogCard from "./blog";
 import BlogLoading from "./blog_loading";
 
@@ -16,14 +16,16 @@ const BlogSection: FC = () => {
 
   useEffect(() => {
     setLoaidng(true);
-    fetch("https://v1.nocodeapi.com/batorgil/medium/sUYRoUHoNdwtKNPI", {
+    fetch("https://medium.com/feed/@batorgil-it", {
       method: "get",
       headers: { "Content-Type": "application/json" },
       redirect: "follow",
       cache: "force-cache",
     })
       .then((response) => response.json())
-      .then((response) => setBlogs(response as any))
+      .then((response) => {
+        if (Array.isArray(response)) setBlogs(response as any);
+      })
       .catch((error) => console.log("error", error))
       .finally(() => {
         setLoaidng(false);
