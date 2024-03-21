@@ -70,7 +70,7 @@ const ContactMeSection: FC = () => {
           >
             <div
               className={classNames(
-                "max-w-[1200px] w-full flex gap-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-left group "
+                "max-w-[1200px] w-full flex flex-col md:flex-row gap-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-left group "
               )}
             >
               <div

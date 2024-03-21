@@ -34,7 +34,7 @@ const BlogSection: FC = () => {
     <div className="text-center w-full flex justify-center">
       <div className="w-full flex flex-col justify-center items-center px-4">
         <div className="font-semibold text-[28px] mb-12">My Blogs</div>
-        <div className="md:flex-row w-full">
+        <div className="md:flex-row w-full px-6">
           <Slider
             ref={slider}
             dots={false}

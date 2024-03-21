@@ -30,7 +30,7 @@ const EmploymentCard: FC<{
       }}
     >
       <div className="flex flex-row gap-4">
-        <div className="max-w-[60px]">
+        <div className="max-w-[60px] hidden md:block">
           <div className="rounded-lg border-2 broder-white p-2">
             <IconTerminal />
           </div>

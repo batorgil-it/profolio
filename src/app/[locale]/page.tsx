@@ -14,8 +14,10 @@ const HomePage: FC<{ params: { lng: string } }> = ({}) => {
   const t = useTranslations();
   return (
     <>
-      <div className="absolute w-[100%] min-w-[800px] h-[100vh] hero opacity-50 -z-10 -top-[250px] overflow-hidden"></div>
-      <main className="container mx-auto px-2 md:mt-24">
+      <div className="absolute w-full overflow-hidden h-[100vh] -top-[250px]">
+        <div className="absolute w-[100%] min-w-[800px] h-[100vh] hero opacity-50 -z-10 -top-[250px] overflow-hidden"></div>
+      </div>
+      <main className="container mx-auto md:mt-24">
         <HeroSection />
         <AboutSection />
         <div className="h-12 md:h-36" id="certifications" />
