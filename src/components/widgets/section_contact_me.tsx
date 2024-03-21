@@ -104,7 +104,7 @@ const ContactMeSection: FC = () => {
                       <IconInsta />
                     </div>
                   </Link>
-                  <Link href={"/cv.pdf"}>
+                  <Link href={"/cv.pdf"} target="_blank">
                     <div className="flex items-center justify-center gap-2 bg-secondary text-white p-2 rounded-md font-medium px-4">
                       <span>Download CV</span> <IconCloudDownload />
                     </div>
