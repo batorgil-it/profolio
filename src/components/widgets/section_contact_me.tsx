@@ -39,7 +39,6 @@ const ContactMeSection: FC = () => {
           publicKey: "cp-zd3dbv0OIW4a1K",
         }
       );
-      console.log(res);
       toast.success("Send successfully");
     } catch (error) {
       toast.error("email sent has some error");
