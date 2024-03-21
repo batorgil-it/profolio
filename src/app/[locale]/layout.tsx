@@ -11,6 +11,14 @@ import Head from "next/head";
 export const metadata: Metadata = {
   title: "D.Batorgil",
   description: "Full stack developer",
+  openGraph: {
+    type: "article",
+    description: "Full-stack senior engineer with four years of experience.",
+    title: "D.Batorgil's Profolio",
+    images: "https://batorgil.dev/images/projects/profolio.png",
+    authors: "Batorgil Davaajantsan",
+    url: "https://batorgil.dev",
+  },
 };
 
 export default function RootLayout({
@@ -32,15 +40,6 @@ export default function RootLayout({
         <meta
           name="viewport"
           content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"
-        />
-        <meta property="og:title" content="D. Batorgil's profolio" />
-        <meta property="og:site_name" content="D. Batorgil" />
-        <meta property="og:url" content="batorgil.dev" />
-        <meta property="og:description" content="" />
-        <meta property="og:type" content="" />
-        <meta
-          property="og:image"
-          content="https://batorgil.dev/images/projects/profolio.png"
         />
       </Head>
 
