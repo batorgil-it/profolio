@@ -6,13 +6,13 @@ import { FC, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const ProjectCard: FC<{
-  title?: string;
-  description?: string;
-  techs?: string[];
-  imageSrc?: string;
+  title: string;
+  description: string;
+  techs: string[];
+  imageSrc: string;
   direction: "left" | "right";
-  link?: string;
-}> = ({ title, description, techs, imageSrc, direction }) => {
+  link: string;
+}> = ({ title, description, techs, imageSrc, direction, link }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,12 +23,7 @@ const ProjectCard: FC<{
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <Link
-      href={
-        "https://play.google.com/store/search?q=Magic%20store&c=apps&hl=en&gl=US"
-      }
-      target="_blank"
-    >
+    <Link href={link} target="_blank">
       <motion.div
         ref={ref}
         style={{
@@ -48,44 +43,30 @@ const ProjectCard: FC<{
               direction === "right" ? "md:pl-0" : "md:pr-0"
             )}
           >
-            <div className="font-semibold text-[22px]">
-              Vending Management System
-            </div>
-            <div className="">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-              veniam, quae obcaecati rerum, unde ab debitis architecto
-              voluptatibus commodi labore voluptatum dicta reprehenderit et
-              totam beatae illum, amet sequi assumenda.
-            </div>
+            <div className="font-semibold text-[22px]">{title}</div>
+            <div className="">{description}</div>
             <div className="flex flex-wrap gap-2">
-              <div className="bg-gray-300 dark:bg-gray-900 px-3 rounded-lg">
-                React
-              </div>
-              <div className="bg-gray-300 dark:bg-gray-900 px-3 rounded-lg">
-                React Native
-              </div>
-              <div className="bg-gray-300 dark:bg-gray-900 px-3 rounded-lg">
-                Golang
-              </div>
-              <div className="bg-gray-300 dark:bg-gray-900 px-3 rounded-lg">
-                Microservice
-              </div>
-              <div className="bg-gray-300 dark:bg-gray-900 px-3 rounded-lg">
-                Binary coding
-              </div>
+              {techs.map((item) => (
+                <div
+                  key={item}
+                  className="bg-gray-300 dark:bg-gray-900 px-3 rounded-lg"
+                >
+                  {item}
+                </div>
+              ))}
             </div>
           </div>
           <div className="hidden md:block w-[15rem] relative overflow-hidden">
             <div
               className={classNames(
-                "absolute w-[32rem]  bottom-6 h-[15rem] transition ease-in-out group-hover:-translate-y-1 duration-300",
+                "absolute w-[32rem]  bottom-6 h-[80%] transition ease-in-out group-hover:-translate-y-1 duration-300",
                 direction === "right"
                   ? "right-6 group-hover:rotate-6"
                   : "left-6 group-hover:-rotate-6"
               )}
             >
               <Image
-                src="/images/projects/vms.png"
+                src={imageSrc}
                 fill
                 alt="featured"
                 className="rounded-lg overflow-hidden"

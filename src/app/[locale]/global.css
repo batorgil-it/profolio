@@ -35,19 +35,19 @@
     @apply border-primary;
   }
   input[type="text"] {
-    @apply rounded-lg bg-gray-50 dark:bg-gray-900;
+    @apply rounded-lg bg-gray-50 dark:bg-gray-700;
   }
 
   input[type="email"]:focus {
     @apply border-primary;
   }
   input[type="email"] {
-    @apply rounded-lg bg-gray-50 dark:bg-gray-900;
+    @apply rounded-lg bg-gray-50 dark:bg-gray-700;
   }
   textarea:focus {
     @apply border-primary;
   }
   textarea {
-    @apply rounded-lg bg-gray-50 dark:bg-gray-900;
+    @apply rounded-lg bg-gray-50 dark:bg-gray-700;
   }
 }

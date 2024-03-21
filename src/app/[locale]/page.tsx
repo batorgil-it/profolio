@@ -1,14 +1,12 @@
-import Blogs from "@/components/widgets/blogs";
-import EmploymentCard from "@/components/widgets/employment";
 import AboutSection from "@/components/widgets/section_about";
+import BlogSection from "@/components/widgets/section_blog";
 import CertSection from "@/components/widgets/section_certificate";
+import ContactMeSection from "@/components/widgets/section_contact_me";
+import EmploymentSection from "@/components/widgets/section_employment";
 import HeroSection from "@/components/widgets/section_hero";
+import ProjectsSection from "@/components/widgets/section_projects";
 import { useTranslations } from "next-intl";
 import { FC } from "react";
-import ProjectCard from "../../components/widgets/project";
-import ProjectsSection from "@/components/widgets/section_projects";
-import EmploymentSection from "@/components/widgets/section_employment";
-import ContactMeSection from "@/components/widgets/section_contact_me";
 
 export const revalidate = 3600;
 
@@ -27,7 +25,7 @@ const HomePage: FC<{ params: { lng: string } }> = ({}) => {
         <div className="h-12 md:h-36" id="experience" />
         <EmploymentSection />
         <div className="h-12 md:h-36" id="blogs" />
-        <Blogs />
+        <BlogSection />
         <div className="h-12 md:h-36" id="contact" />
         <ContactMeSection />
         <div className="h-12" id="contact" />

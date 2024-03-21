@@ -1,15 +1,12 @@
 "use client";
-import { useTranslations } from "next-intl";
 import { FC } from "react";
 import Certificate from "./certificate";
 
 const CertSection: FC = () => {
-  const t = useTranslations("cert");
-
   return (
     <div className="text-center w-full flex justify-center">
       <div className="w-full flex flex-col justify-center items-center px-4">
-        <div className="font-semibold text-[28px] mb-12">{t("cert")}</div>
+        <div className="font-semibold text-[28px] mb-12">My Certifications</div>
         <div className="flex gap-6 flex-col md:flex-row ">
           <Certificate
             title="AWS Certified Solutions Architect - Associate"
