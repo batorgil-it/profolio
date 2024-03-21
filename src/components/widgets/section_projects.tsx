@@ -54,6 +54,20 @@ const ProjectsSection: FC = () => {
             techs={["Jitsi", "Javascript", "Configuration", "Golang"]}
             link="https://meeting.cloud.mn"
           />
+          <ProjectCard
+            direction="left"
+            description="transfer.cloud.mn is temporary file storage for anyone you can upload up to 2GB file. I researched about s3 and multi-part uploading technique on AWS s3 and used minio server on our server to upload file more faster. Developed full system from ground up."
+            title="Transfer Cloud MN"
+            imageSrc="/images/projects/file.png"
+            techs={[
+              "ASW S3 compatible API",
+              "Minio",
+              "React",
+              "Golang",
+              "File Streaming",
+            ]}
+            link="transfer.cloud.mn"
+          />
         </div>
       </div>
     </div>
