@@ -1,6 +1,6 @@
 "use client";
 
-import { MeduimBlog } from "@/types";
+import { Blog } from "@/types";
 import { FC, useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 
@@ -11,12 +11,12 @@ import BlogLoading from "./blog_loading";
 
 const BlogSection: FC = () => {
   const [loading, setLoaidng] = useState<boolean>(false);
-  const [blogs, setBlogs] = useState<MeduimBlog[]>([]);
+  const [blogs, setBlogs] = useState<Blog[]>([]);
   const slider = useRef<Slider>(null);
 
   useEffect(() => {
     setLoaidng(true);
-    fetch("https://medium.com/feed/@batorgil-it", {
+    fetch("/api/blogs", {
       method: "get",
       headers: { "Content-Type": "application/json" },
       redirect: "follow",
@@ -67,7 +67,7 @@ const BlogSection: FC = () => {
             {loading && <BlogLoading />}
             {!loading &&
               blogs.map((blog) => {
-                return <BlogCard key={blog.link} blog={blog} />;
+                return <BlogCard key={blog.link[0]} blog={blog} />;
               })}
           </Slider>
         </div>
