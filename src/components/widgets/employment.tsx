@@ -17,7 +17,7 @@ const EmploymentCard: FC<{
     offset: ["0 1", "1.33 1"],
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.95, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
@@ -36,10 +36,18 @@ const EmploymentCard: FC<{
           </div>
         </div>
         <div className="flex-1 w-full text-left">
-          <div className="mb-4">
-            <div className="font-semibold">{company}</div>
-            <div className="font-medium text-gray-400">{date}</div>
+          <div className="mb-4 flex-1 flex flew-row gap-4">
+            <div className="max-w-[60px] block md:hidden">
+              <div className="rounded-lg border-2 broder-white p-2">
+                <IconTerminal />
+              </div>
+            </div>
+            <div>
+              <div className="font-semibold">{company}</div>
+              <div className="font-medium text-gray-400">{date}</div>
+            </div>
           </div>
+
           <motion.div
             ref={ref}
             style={{

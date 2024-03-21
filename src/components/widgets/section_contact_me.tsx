@@ -93,7 +93,7 @@ const ContactMeSection: FC = () => {
                   <p>Telegram: +97689985130</p>
                 </div>
                 <div className="flex-1" />
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-4 items-center flex-wrap">
                   <Link href={"https://www.linkedin.com/in/batorgil-it/"}>
                     <div className="flex items-center justify-center gap-2 bg-secondary text-white p-2 rounded-md font-medium">
                       <IconLinkedin />
