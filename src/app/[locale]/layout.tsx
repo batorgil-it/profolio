@@ -33,6 +33,15 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"
         />
+        <meta property="og:title" content="D. Batorgil's profolio" />
+        <meta property="og:site_name" content="D. Batorgil" />
+        <meta property="og:url" content="batorgil.dev" />
+        <meta property="og:description" content="" />
+        <meta property="og:type" content="" />
+        <meta
+          property="og:image"
+          content="https://batorgil.dev/images/projects/profolio.png"
+        />
       </Head>
 
       <NextIntlClientProvider messages={messages}>
