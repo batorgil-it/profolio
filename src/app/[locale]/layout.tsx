@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     description: "Full-stack senior engineer with four years of experience.",
-    title: "D.Batorgil's Profolio",
+    title: "D.Batorgil's Portfolio",
     images: "https://batorgil.dev/images/projects/profolio.png",
     authors: "Batorgil Davaajantsan",
     url: "https://batorgil.dev",
