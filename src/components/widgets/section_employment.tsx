@@ -12,8 +12,25 @@ const EmploymentSection: FC = () => {
         <div className="font-semibold text-[28px] mb-12">My Experience</div>
         <div className="w-full flex gap-6 md:gap-8 flex-col items-center">
           <EmploymentCard
+            company="Khanbank LLC"
+            date="Apr 2024 - Now"
+            position="Technology architect"
+            roles={[
+              "Conducted technology research in accordance with TOGAF standards to support enterprise architecture initiatives.",
+              "Developed and implemented architectural solutions to enhance the bank's IT infrastructure.",
+              "Collaborated with cross-functional teams to ensure technology alignment with business objectives.",
+              "Ensured the scalability, reliability, and security of technology solutions within the enterprise.",
+            ]}
+            techs={[
+              "Any technology that needs research",
+              "Kubernetes",
+              "Redhat",
+              "Research & Persentation",
+            ]}
+          />
+          <EmploymentCard
             company="Techpartners LLC"
-            date="Jan 2021 - Now"
+            date="Jan 2021 - Apr 2024"
             position="Senior Lead Software Developer"
             roles={[
               "As a Development Team Lead, I working on the diverse range of projects in techpartners. Core system types that i worked on, are ERP, Ecommerce and Real state agency internal Back-office. My most contributed project was Vending System Management project it has Staff app, Backoffice, and Vending machine application integrated with multiple payment integration such as Qpay, Socialpay, Hipay etc.",
