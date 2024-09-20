@@ -10,6 +10,14 @@ const ProjectsSection: FC = () => {
         <div className="font-semibold text-[28px] mb-12">My Projects</div>
         <div className="w-full flex gap-6 md:gap-8 flex-col items-center">
           <ProjectCard
+            direction="right"
+            description="My family business for connecting customer and string art artists with each other. In other word ecommerce site for gifts. I developed every thing from scratch."
+            title="String Art Mongolia"
+            imageSrc="/images/projects/stringart.png"
+            techs={["React", "Tailwind", "Motion", "Golang"]}
+            link="https://stringart.mn"
+          />
+          <ProjectCard
             direction="left"
             description="I played a key role in development of the VMS, where I was directly responsible for creating API services, Machine application, Staff applicatoin and deployment of system. Currently this system has over 9000 successful invoiceing dairly and 200+ machine using system."
             title="VMS - Vending Management System"
