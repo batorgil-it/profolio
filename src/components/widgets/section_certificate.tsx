@@ -20,6 +20,12 @@ const CertSection: FC = () => {
             href="https://www.credly.com/badges/b40b2651-2c05-4e7d-a1ff-c62c454eced3/public_url"
             imageSrc="/images/cka.webp"
           />
+          <Certificate
+            title="CKAD: Certified Kubernetes Application Developer"
+            from="Linux Foundation"
+            href="https://www.credly.com/badges/e571d5f7-2af4-498e-a4be-b683502aa899/public_url"
+            imageSrc="/images/ckad.png"
+          />
         </div>
       </div>
     </div>
